@@ -1,0 +1,104 @@
+/* toolkit.legacyUserProfileCustomizations.stylesheets */
+
+/* hides the native tabs */
+#main-window:not([drawtitle="true"]):not([inFullscreen="true"]) 
+
+/* leaves space for the window buttons */
+#nav-bar { 
+    margin-left : 30px;  /* leftTop drag area */
+    border-right: 140px solid var(--toolbar-bgcolor); 
+}
+:root[sizemode="maximized"] #nav-bar { 
+    margin-top: 2px !important;   /* Top drag area */
+    margin-left : 0px !important;  /* hidden leftTop drag area in Fullscreen mode*/
+    border-right: 140px solid var(--toolbar-bgcolor); 
+}
+:root[privatebrowsingmode="temporary"] #nav-bar { 
+    border-right: 180px solid var(--toolbar-bgcolor) !important; 
+}
+
+/* move down to hidden titlebar */
+#titlebar {
+    margin-bottom: -31px !important;
+}
+
+/* move down 3 button on rightTop */
+.titlebar-buttonbox-container {
+  margin-bottom: -4px !important;
+}
+:root[sizemode="maximized"] .titlebar-buttonbox-container {
+  margin-bottom: -5px !important;
+}
+
+/* move down private icon */
+.private-browsing-indicator {
+  margin-bottom: -4px !important;
+}
+:root[sizemode="maximized"] .private-browsing-indicator {
+  margin-bottom: -7px !important;
+}
+
+/* hidden horizontal tabbar on top */
+#tabbrowser-tabs[orient="horizontal"] {
+    visibility: collapse !important;
+}
+
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] 
+sidebarheader { 
+    visibility: collapse !important; 
+}
+
+/*Tree Style Tab START*/
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+/*Tree Style Tab END*/
+
+
+
+/*AGENT_SHEET*/
+
+/************************************/
+/****** simpleMenuWizard START ******/
+
+/**********************************************
+   Modify these files themselves to your needs.
+   Do not modify the following @import block.
+   **********************************************/
+
+/*** When right-clicking on... ***/
+@import url("./simpleMenuWizard/blank-context.css");      /* ...a blank area on a webpage                    */
+@import url("./simpleMenuWizard/frame-context.css");      /* ...an iframe                                    */
+@import url("./simpleMenuWizard/image-context.css");      /* ...an image                                     */
+@import url("./simpleMenuWizard/input-context.css");      /* ...an input-field                               */
+@import url("./simpleMenuWizard/link-context.css");       /* ...a link                                       */
+@import url("./simpleMenuWizard/main-hamburger.css");     /* Leftclick the hamburger menu on top right       */
+@import url("./simpleMenuWizard/main-menubar.css");       /* Leftclick on main menubar (open with ALT key)   */
+@import url("./simpleMenuWizard/media-context.css");      /* ...media like audio or html5 video              */
+@import url("./simpleMenuWizard/select-context.css");     /* ...selected text or selected object             */
+@import url("./simpleMenuWizard/sidebar-context.css");    /* ...items in bookmarks- or history sidebar       */
+@import url("./simpleMenuWizard/sidebar-header.css");     /* Leftclick on sidebar header                     */
+@import url("./simpleMenuWizard/source-context.css");     /* ...a blank area when viewing source code        */
+@import url("./simpleMenuWizard/tab-context.css");        /* ...a tab                                        */
+@import url("./simpleMenuWizard/toolbar-context.css");    /* ...the toolbar or tabbar                        */
+@import url("./simpleMenuWizard/urlbar-context.css");     /* ...the addressbar                               */
+
+
+/*** Options ***/
+
+/**********************************************************
+   How to activate or deactivate the following options:
+   Remove '/*' at the beginning of a line (not comment line) to activate the option
+   Add '/*' at the beginning of the line (not comment line) to deactivate the option
+   **********************************************************/
+
+/*** Hide all "Send <item> to Device" entries ***/
+/* @import url("./simpleMenuWizard/opt_noSendToDevice.css");
+
+/*** Hide all inactive menu items ***/
+/* #mainPopupSet menuitem[disabled="true"] { display: none !important; }
+
+/****** simpleMenuWizard END ******/
+/**********************************/
